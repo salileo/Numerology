@@ -1,0 +1,71 @@
+﻿<Window x:Class="NumerlogyCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NumerlogyCalculator"
+        mc:Ignorable="d"
+        Title="Numerology Calculator" Height="550" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="5 5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0">Full name at birth</Label>
+            <TextBox Grid.Column="1" VerticalContentAlignment="Center" Name="NameAtBirth"></TextBox>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="5 5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0">Current full name</Label>
+            <TextBox Grid.Column="1" VerticalContentAlignment="Center" Name="CurrentName"></TextBox>
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="5 5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0">Date Of Birth</Label>
+            <ComboBox Grid.Column="1" Name="DOB_Day"></ComboBox>
+            <ComboBox Grid.Column="2" Name="DOB_Month" Margin="5 0">
+                <ComboBoxItem>January</ComboBoxItem>
+                <ComboBoxItem>February</ComboBoxItem>
+                <ComboBoxItem>March</ComboBoxItem>
+                <ComboBoxItem>April</ComboBoxItem>
+                <ComboBoxItem>May</ComboBoxItem>
+                <ComboBoxItem>June</ComboBoxItem>
+                <ComboBoxItem>July</ComboBoxItem>
+                <ComboBoxItem>August</ComboBoxItem>
+                <ComboBoxItem>September</ComboBoxItem>
+                <ComboBoxItem>October</ComboBoxItem>
+                <ComboBoxItem>November</ComboBoxItem>
+                <ComboBoxItem>December</ComboBoxItem>
+            </ComboBox>
+            <TextBox Grid.Column="3" Name="DOB_Year"></TextBox>
+        </Grid>
+
+        <Button Grid.Row="3" Margin="5 5" Width="150" Click="Button_Click">Calculate Numbers</Button>
+
+        <Border Grid.Row="4" Margin="5 5" BorderThickness="1" BorderBrush="Black">
+            <TextBlock Padding="5" Name="Result"></TextBlock>
+        </Border>
+    </Grid>
+</Window>
